@@ -114,6 +114,11 @@ def build_models():
     }
 
 
+def build_model():
+    """Backward-compatible function for existing tests."""
+    return build_models()["logistic_regression"]
+
+
 def find_best_threshold(y_true, probabilities):
     """
     Select a classification threshold using validation data.
